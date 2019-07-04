@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.lv.cloud</groupId>
+		<artifactId>SCP</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>scp-api-manager</artifactId>
+	<name>${project.artifactId}</name>
+    <packaging>pom</packaging>
+
+	<modules>
+		<module>scp-api-manager-common</module>
+		<module>scp-api-manager-api</module>
+		<module>scp-api-manager-service</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+
+			<dependency>
+				<groupId>com.lv.cloud</groupId>
+				<artifactId>scp-api-manager-common</artifactId>
+				<version>${version}</version>
+			</dependency>
+		</dependencies>
+
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>

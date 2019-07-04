@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      profile: ${config_profile}
+      name: scp-api-manager
+      uri: ${config_url}
+      enabled: true
