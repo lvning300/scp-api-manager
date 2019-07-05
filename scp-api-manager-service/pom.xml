@@ -84,6 +84,11 @@
             <groupId>com.lv.cloud</groupId>
             <artifactId>scp-api-manager-common</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.lv.cloud</groupId>
+            <artifactId>scp-api-manager-api</artifactId>
+            <version>${version}</version>
+        </dependency>
     </dependencies>
 
     <build>

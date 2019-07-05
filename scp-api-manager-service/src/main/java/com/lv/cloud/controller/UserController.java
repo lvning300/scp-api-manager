@@ -2,6 +2,7 @@ package com.lv.cloud.controller;
 
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.lv.cloud.UserServiceFeignClient;
 import com.lv.cloud.entity.User;
 import com.lv.cloud.entity.UserOAuthEntity;
 import com.lv.cloud.service.IUserOAuth2Service;
@@ -24,10 +25,11 @@ import java.util.List;
  * @author LvNing
  * @since 2019-06-12
  */
+/*@RestController
+@RequestMapping("/api/v1/user")*/
 @RestController
-@RequestMapping("/api/v1/user")
 @Slf4j
-public class UserController {
+public class UserController implements UserServiceFeignClient {
 
     @Autowired
     IUserService userService;
@@ -37,7 +39,7 @@ public class UserController {
 
     @HystrixCommand
     @ApiOperation(value = "查询所有用户信息", response = User.class)
-    @GetMapping(value = "all", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @Override
     public List<User> queryAll() {
        /* return userService.queryAll().stream()
                 .map(rs -> {
