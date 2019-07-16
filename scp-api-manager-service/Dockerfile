@@ -1,6 +1,6 @@
 FROM openjdk:8u171-alpine3.8
 
-LABEL maintainer="Jack Peng <cnjack.peng@foxmail.com>"
+LABEL maintainer="LvNing"
 
 COPY entrypoint.sh /usr/bin
 COPY target/ibp-api-manager-service.jar /usr/local
