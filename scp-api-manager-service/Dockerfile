@@ -3,7 +3,7 @@ FROM openjdk:8u171-alpine3.8
 LABEL maintainer="LvNing"
 
 COPY entrypoint.sh /usr/bin
-COPY target/ibp-api-manager-service.jar /usr/local
+COPY target/scp-api-manager.jar /usr/local
 
 RUN chmod a+x /usr/bin/entrypoint.sh \
     && echo "http://mirrors.aliyun.com/alpine/v3.8/main/" > /etc/apk/repositories \

@@ -21,4 +21,4 @@ else
 	cd ~
 fi
 
-java $JAVA_OPTS -Dconfig_url=$config_url -Dconfig_active=$config_active -jar "/usr/local/ibp-api-manager-service.jar"
+java $JAVA_OPTS -Dconfig_url=$config_url -Dconfig_active=$config_active -jar "/usr/local/scp-api-manager.jar"
